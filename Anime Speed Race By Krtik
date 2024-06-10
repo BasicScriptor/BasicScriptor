@@ -3,7 +3,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Made by Basic Scriptor", HidePremium = false, SaveConfig = true, ConfigFolder = "NegusFam"})
 
 local MainTab = Window:MakeTab({
-	Name = "Skin",
+	Name = "Gamepass Skin",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -43,6 +43,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"
 
     end    
 })
+
 
 local NewTab = Window:MakeTab({
 	Name = "Main",
@@ -112,4 +113,118 @@ Tab1:AddToggle({
             _G.ghost = false 
         end
     end
+})
+
+local Tab2 = Window:MakeTab({
+  Name = "Skins",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false,
+})
+
+Tab2:AddButton({
+	Name = "Kakashe",
+	Callback = function()
+      		local args = {
+    [1] = "Kakashe"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Jiraye",
+	Callback = function()
+      		local args = {
+    [1] = "Jiraye"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Sazuke",
+	Callback = function()
+      		local args = {
+    [1] = "Sazuke"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Sakuri",
+	Callback = function()
+      		local args = {
+    [1] = "Sakuri"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Zaruto",
+	Callback = function()
+      		local args = {
+    [1] = "Zaruto"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Ceu",
+	Callback = function()
+      		local args = {
+    [1] = "Ceu"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Siccolo",
+	Callback = function()
+      		local args = {
+    [1] = "Siccolo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Degeta",
+	Callback = function()
+      		local args = {
+    [1] = "Degeta"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Koku",
+	Callback = function()
+      		local args = {
+    [1] = "Koku"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
 })
