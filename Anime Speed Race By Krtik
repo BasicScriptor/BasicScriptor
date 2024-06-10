@@ -1,0 +1,90 @@
+-- Made by Basic Scriptor/discord oldcentury23
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Made by Negus", HidePremium = false, SaveConfig = true, ConfigFolder = "NegusFam"})
+
+local MainTab = Window:MakeTab({
+	Name = "Skin",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+MainTab:AddButton({
+	Name = "Tangiro",
+	Callback = function()
+      		local args = {
+    [1] = "Tangiro"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Zaitama",
+	Callback = function()
+      		local args = {
+    [1] = "Zaitama"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+  	end    
+})
+
+MainTab:AddButton({
+	Name = "Beorus",
+	Callback = function()
+      		local args = {
+    [1] = "Beorus"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+local NewTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local toggleEnabled = false
+
+NewTab:AddToggle({
+    Name = "inf wins/energy",
+    Default = false,
+    Callback = function(Value)
+        toggleEnabled = Value
+        if toggleEnabled then
+            while toggleEnabled do
+                wait()
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gifts"):WaitForChild("RequestSpinReward"):InvokeServer()
+            end
+        end
+    end
+})
+
+
+local toggleEnabled = false
+
+
+NewTab:AddToggle({
+    Name = "Inf spin",
+    Default = false,
+    Callback = function(Value)
+        toggleEnabled = Value
+        if toggleEnabled then
+            while toggleEnabled do
+                wait()
+                local args = {
+                    [1] = 10,
+                    [2] = "Add"
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gifts"):WaitForChild("UpdateSpins"):FireServer(unpack(args))
+            end
+        end
+    end
+})
+
