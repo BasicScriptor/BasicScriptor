@@ -1,6 +1,6 @@
 -- Made by Basic Scriptor/discord oldcentury23
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Made by Negus", HidePremium = false, SaveConfig = true, ConfigFolder = "NegusFam"})
+local Window = OrionLib:MakeWindow({Name = "Made by Basic Scriptor", HidePremium = false, SaveConfig = true, ConfigFolder = "NegusFam"})
 
 local MainTab = Window:MakeTab({
 	Name = "Skin",
@@ -88,3 +88,28 @@ NewTab:AddToggle({
     end
 })
 
+local Tab1 = Window:MakeTab({
+  Name = "AutoFarm",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false,
+})
+
+local autoClickEnabled = false
+
+Tab1:AddToggle({
+    Name = "AutoClick",
+    Default = false,
+    Callback = function(Value)
+        autoClickEnabled = Value 
+        if autoClickEnabled then
+            _G.ghost = true
+            while _G.ghost do
+                wait()
+                local args = { "Click38", "Desert" }
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Training"):WaitForChild("Train"):FireServer(unpack(args))
+            end
+        else
+            _G.ghost = false 
+        end
+    end
+})
