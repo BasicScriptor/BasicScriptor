@@ -54,7 +54,7 @@ local NewTab = Window:MakeTab({
 local toggleEnabled = false
 
 NewTab:AddToggle({
-    Name = "inf wins/energy",
+    Name = "Inf Wins/Energy",
     Default = false,
     Callback = function(Value)
         toggleEnabled = Value
@@ -228,3 +228,70 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"
 
     end    
 })
+
+Tab2:AddButton({
+	Name = "DoFlamengo",
+	Callback = function()
+      		local args = {
+    [1] = "DoFlamengo"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Chirohige",
+	Callback = function()
+      		local args = {
+    [1] = "Chirohige"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Zore",
+	Callback = function()
+      		local args = {
+    [1] = "Zore"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Akynu",
+	Callback = function()
+      		local args = {
+    [1] = "Akynu"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+Tab2:AddButton({
+	Name = "Ace",
+	Callback = function()
+      		local args = {
+    [1] = "Ace"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+
+    end    
+})
+
+local Tab3 = Window:MakeTab({
+  Name = "Player",
+  Icon = "rbxassetid://4483345998",
+  PremiumOnly = false,
+})
+
