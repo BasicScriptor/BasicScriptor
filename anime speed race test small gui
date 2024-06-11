@@ -1,0 +1,108 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Anime Race Speed")
+local KillingCheats = PhantomForcesWindow:NewSection("AutoFarm")
+
+local autoClickEnabled = false
+
+KillingCheats:CreateToggle("AutoClick", function(value)
+    autoClickEnabled = value
+    if autoClickEnabled then
+        _G.Krtik = true
+        while _G.Krtik do
+            wait()
+            local args = {
+                [1] = "Click32",
+                [2] = "Desert"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Training"):WaitForChild("Train"):FireServer(unpack(args))
+            
+            if not autoClickEnabled then
+                _G.Krtik = false
+                break
+            end
+        end
+    else
+        _G.Krtik = false
+    end
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Skin")
+
+KillingCheats:CreateTextbox("Input Skin Name", function(text)
+    local args = {
+        [1] = text -- use the input text as the skin name
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+end)
+
+KillingCheats:CreateButton("Execute Skin Change", function()
+    local args = {
+        [1] = "Fluffy" -- Replace "Fluffy" with the desired skin name
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+end)
+
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+
+local PhantomForcesWindow = Library:NewWindow("Anime Race Speed")
+
+local KillingCheats = PhantomForcesWindow:NewSection("AutoFarm")
+
+local autoClickEnabled = false
+
+KillingCheats:CreateToggle("AutoClick", function(value)
+    autoClickEnabled = value
+    if autoClickEnabled then
+        _G.Krtik = true
+        while _G.Krtik do
+            wait()
+            local args = {
+                [1] = "Click32",
+                [2] = "Desert"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Training"):WaitForChild("Train"):FireServer(unpack(args))
+            
+            if not autoClickEnabled then
+                _G.Krtik = false
+                break
+            end
+        end
+    else
+        _G.Krtik = false
+    end
+end)
+
+local KillingCheats = PhantomForcesWindow:NewSection("Skin")
+
+KillingCheats:CreateTextbox("Input Skin Name", function(text)
+    local args = {
+        [1] = text -- use the input text as the skin name
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+end)
+
+KillingCheats:CreateButton("Default Skin", function()
+    local args = {
+        [1] = "Fluffy" -- Replace "Fluffy" with the desired skin name
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Skis"):WaitForChild("InteractSki"):FireServer(unpack(args))
+end)
+
+KillingCheats:CreateToggle("Inf-Stat", function(value)
+    autoClickEnabled = value
+    if autoClickEnabled then
+        _G.Krtik = true
+        while _G.Krtik do
+            wait()
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Gifts"):WaitForChild("RequestSpinReward"):InvokeServer()
+
+            if not autoClickEnabled then
+                _G.Krtik = false
+                break
+            end
+        end
+    else
+        _G.Krtik = false
+    end
+end)
