@@ -11,6 +11,9 @@ KillingCheatsObby:CreateButton("UGC", function()
     game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_knit@1.7.0").knit.Services.EventService.RF.ClaimUGC:InvokeServer(unpack(args))
 end)
 
-KillingCheatsObby:CreateButton("Copy YouTube Channel Link", function()
+KillingCheatsYT
+local KillingCheatsYT = PhantomForcesWindow:NewSection("YT:BasicScriptor")
+
+KillingCheatsYT:CreateButton("Copy YouTube Channel Link", function()
     setclipboard("https://www.youtube.com/@BasicScriptor")
 end)
